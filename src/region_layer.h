@@ -13,6 +13,7 @@ extern "C" {
 	void forward_region_layer(const layer l, network_state state);
 	void backward_region_layer(const layer l, network_state state);
 	void get_region_boxes(layer l, int w, int h, float thresh, float **probs, box *boxes, int only_objectness, int *map, float tree_thresh);
+	void get_region_boxes_old(layer l, int w, int h, int netw, int neth, float thresh, float **probs, box *boxes, int only_objectness, int *map, float tree_thresh, int relative);
 	void resize_region_layer(layer *l, int w, int h);
 
 #ifdef __cplusplus
